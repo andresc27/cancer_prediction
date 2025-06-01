@@ -1,3 +1,42 @@
+# Clasificación de Cáncer de Mama con Regresión Logística
+
+Este proyecto utiliza el conjunto de datos de cáncer de mama de Wisconsin para construir un modelo de regresión logística que predice si un tumor es maligno o benigno. Se implementa un flujo completo de análisis de datos, desde la preparación hasta la evaluación del modelo, incluyendo balanceo de clases y ajuste de hiperparámetros.
+
+## 📁 Estructura del proyecto
+
+- **Carga y limpieza de datos:** Se renombran las columnas para mayor claridad.
+- **Preparación del conjunto de datos:** División en características (X) y etiquetas (y), junto con un split estratificado en entrenamiento y prueba.
+- **Balanceo de clases con SMOTE:** Para evitar el sesgo hacia la clase mayoritaria.
+- **Ajuste de hiperparámetros con GridSearchCV:** Se busca la mejor combinación de `C`, `penalty` y `solver`.
+- **Entrenamiento final y evaluación del modelo:** Se entrena un modelo final usando los mejores parámetros y se evalúa con métricas como AUC, precisión, recall y f1-score.
+- **Interpretabilidad:** Se muestran los coeficientes más importantes para comprender la influencia de cada variable.
+
+## 📊 Resultados
+
+- **AUC en conjunto de prueba:** 0.9962
+- **Precisión global:** 96%
+- Buen equilibrio entre precisión y recall para ambas clases.
+
+## 🧠 Conclusiones
+
+- La regresión logística, combinada con SMOTE y un buen ajuste de hiperparámetros, puede lograr una excelente capacidad predictiva en tareas de clasificación binaria.
+- El análisis de coeficientes proporciona una interpretación clara de las variables más relevantes en la predicción.
+- A pesar de que la regresión logística asume linealidad, su rendimiento fue sobresaliente, lo que sugiere que los datos tienen una estructura lineal bien separable después del preprocesamiento.
+
+## 📚 Requisitos
+
+- Python 3.7+
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn
+- imbalanced-learn (para SMOTE)
+- lightgbm (si se desea comparar con modelos de árboles)
+
+Instala los paquetes necesarios con:
+
+```bash
+pip install -r requirements.txt
+```
+# ENGLISH
 # Breast Cancer Classification using Logistic Regression
 
 This project aims to classify breast cancer tumors as **malignant** or **benign** using a logistic regression model. It includes data preprocessing, class balancing using SMOTE, hyperparameter tuning via GridSearchCV, model training, and evaluation.
