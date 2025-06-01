@@ -84,5 +84,4 @@ The dataset used is the **Breast Cancer Wisconsin (Diagnostic) Dataset**, which 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/breast-cancer-logistic.git
-   cd breast-cancer-logistic
+   git clone https://github.com/yourusername/breast-cancer-logistic.git](https://github.com/andresc27/cancer_prediction.git
